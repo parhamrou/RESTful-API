@@ -11,9 +11,10 @@ const (
 	host     = 	"localhost"
 	user     = 	"parhamrou"
 	password = 	"parham1381"
-	dbname   =  "parham1381"
+	dbname   =  "musics"
 	port     =  5432
 )
+
 
 var db *gorm.DB
 
