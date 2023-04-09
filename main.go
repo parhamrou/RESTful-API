@@ -2,8 +2,8 @@ package main
 
 import (
 		"github.com/labstack/echo/v4"
-	api "github.com/parhamrou/Music-CloudStorage/server/endpoints"
-	db  "github.com/parhamrou/Music-CloudStorage/server/database"
+	api "github.com/parhamrou/Music-CloudStorage/endpoints"
+	db  "github.com/parhamrou/Music-CloudStorage/database"
 )
 
 func main() {
@@ -19,8 +19,8 @@ func initialize(e *echo.Echo) error {
 		return err
 	}
 	e.POST("/api/music", api.AddMusic)
-	e.GET("/api/music/:music_name", api.GetMusic)
-	e.DELETE("api/music/:music_name", api.DeleteMusic)
+	e.GET("/api/music/:id", api.GetMusic)
+	e.DELETE("api/music/:id", api.DeleteMusic)
 	e.GET("/api/album/:album_name", api.GetByAlbum)
 	e.GET("api/artist/:artist_name", api.GetByArtist)
 	return nil

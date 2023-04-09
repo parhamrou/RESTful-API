@@ -3,8 +3,8 @@ package endpoints
 import (
 		"net/http"
 		"github.com/labstack/echo/v4"
-	db  "github.com/parhamrou/Music-CloudStorage/server/database"
-		"github.com/parhamrou/Music-CloudStorage/server/model"
+	db  "github.com/parhamrou/Music-CloudStorage/database"
+		"github.com/parhamrou/Music-CloudStorage/model"
 )
 
 
@@ -21,7 +21,7 @@ func AddMusic(c echo.Context) error {
 
 
 func GetMusic(c echo.Context) error {
-	musicName := c.Param("music_name")
+	musicName := c.Param("id")
 	music, err := db.GetMusic(musicName)
 	if err != nil {
 		return err
@@ -31,7 +31,7 @@ func GetMusic(c echo.Context) error {
 
 
 func DeleteMusic(c echo.Context) error {
-	musicName := c.Param("music_name")
+	musicName := c.Param("id")
 	if err := db.DeleteMusic(musicName); err != nil {
 		return err
 	}

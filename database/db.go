@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"gorm.io/driver/postgres"
   	"gorm.io/gorm"
-	"github.com/parhamrou/Music-CloudStorage/server/model"
+	"github.com/parhamrou/Music-CloudStorage/model"
 )
 
 const (
@@ -32,15 +32,15 @@ func AddMusic(music *model.Music) error {
 }
 
 
-func GetMusic(fileName string) (*model.Music, error) {
+func GetMusic(id string) (*model.Music, error) {
 	var music *model.Music
-	result := db.Model(model.Music{}).Where("file_name = ?", fileName).First(&music)
+	result := db.Model(model.Music{}).First(&music, id)
 	return music, result.Error
 }
 
 
-func DeleteMusic(fileName string) error {
-	return db.Where("file_name = ?", fileName).Delete(&model.Music{}).Error
+func DeleteMusic(id string) error {
+	return db.Delete(&model.Music{}, id).Error
 }
 
 
