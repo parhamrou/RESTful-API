@@ -11,7 +11,7 @@ const (
 	host     = 	"localhost"
 	user     = 	"parhamrou"
 	password = 	"parham1381"
-	dbname   =  "musics"
+	dbname   =  "restful_api"
 	port     =  5432
 )
 
