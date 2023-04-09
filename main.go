@@ -2,8 +2,8 @@ package main
 
 import (
 		"github.com/labstack/echo/v4"
-	api "github.com/parhamrou/Music-CloudStorage/endpoints"
-	db  "github.com/parhamrou/Music-CloudStorage/database"
+	api "github.com/parhamrou/RESTful-API/endpoints"
+	db  "github.com/parhamrou/RESTful-API/database"
 )
 
 func main() {

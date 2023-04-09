@@ -1,4 +1,4 @@
-module github.com/parhamrou/Music-CloudStorage
+module github.com/parhamrou/RESTful-API
 
 go 1.18
 

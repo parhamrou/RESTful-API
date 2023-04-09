@@ -3,8 +3,8 @@ package endpoints
 import (
 		"net/http"
 		"github.com/labstack/echo/v4"
-	db  "github.com/parhamrou/Music-CloudStorage/database"
-		"github.com/parhamrou/Music-CloudStorage/model"
+	db  "github.com/parhamrou/RESTful-API/database"
+		"github.com/parhamrou/RESTful-API/model"
 )
 
 

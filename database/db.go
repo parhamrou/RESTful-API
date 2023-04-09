@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"gorm.io/driver/postgres"
   	"gorm.io/gorm"
-	"github.com/parhamrou/Music-CloudStorage/model"
+	"github.com/parhamrou/RESTful-API/model"
 )
 
 const (
